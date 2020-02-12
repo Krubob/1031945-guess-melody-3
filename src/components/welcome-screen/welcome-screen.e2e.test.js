@@ -17,9 +17,9 @@ it(`Should welcome button be pressed`, () => {
       />
   );
 
-  const welcomeButton = welcomeScreen.find(`button.welcome__button`);
+  const welcomeButton = welcomeScreen.find(`.welcome__button`);
 
   welcomeButton.props().onClick();
 
-  expect(onWelcomeButtonClick.mock.calls.length).toBe(1);
+  expect(onWelcomeButtonClick).toHaveBeenCalled();
 });
