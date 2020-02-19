@@ -131,8 +131,8 @@ exports[`QuestionGenre is rendered correctly 1`] = `
         </h2>
         <form
           className="game__tracks"
+          onSubmit={[Function]}
         >
-          onSubmit=
           <div
             className="track"
           >

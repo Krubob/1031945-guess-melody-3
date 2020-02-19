@@ -44,8 +44,8 @@ it(`When user answers genre question form is not sent`, () => {
     preventDefault: formSendPrevention,
   });
 
-  expect(onAnswer).toHaveBeenCalledTimes(1);
-  expect(formSendPrevention).toHaveBeenCalledTimes(1);
+  expect(onAnswer).toHaveBeenCalled();
+  expect(formSendPrevention).toHaveBeenCalled();
 });
 
 it(`User answer passed to callback is consistent with "userAnswer" prop`, () => {
@@ -64,7 +64,7 @@ it(`User answer passed to callback is consistent with "userAnswer" prop`, () => 
   inputTwo.simulate(`change`, {target: {checked: true}});
   form.simulate(`submit`, {preventDefault() {}});
 
-  expect(onAnswer).toHaveBeenCalledTimes(1);
+  expect(onAnswer).toHaveBeenCalled();
 
   expect(onAnswer.mock.calls[0][0]).toMatchObject(question);
   expect(onAnswer.mock.calls[0][1]).toMatchObject(userAnswer);
